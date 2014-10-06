@@ -16,6 +16,6 @@ echo "Ah As Ac Ad Kh Ks Kc Kd" | tr ' ' '\n' | sort -R
 
 ```
 echo "Ah As Ac Ad Kh Ks Kc Kd" | \
-     for i in `cat /dev/stdin`; \
+     for i in `cat`; \
          do echo $RANDOM $i; done | sort -n | cut -d\  -f2
 ```
