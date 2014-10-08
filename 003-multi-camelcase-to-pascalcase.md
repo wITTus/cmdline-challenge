@@ -6,7 +6,7 @@ Consider many words of which some may be camel case or not. Concatenate them all
 
 ## Test case 1
 
-```
+```bash
 echo 'Word myWordBlub myBlah' | solution
 ```
 

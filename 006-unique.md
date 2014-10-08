@@ -7,7 +7,7 @@ The challenge is: Write a non-blocking shell command which eliminates duplicates
 
 ## Test case 1
 
-```
+```bash
 echo -e "1\n2\n3\n2" | solution
 ```
 
@@ -21,7 +21,7 @@ Shall print the following output:
 
 ## Test case 2
 
-```
+```bash
 cat /dev/urandom | hexdump -C | solution
 ```
 
@@ -32,7 +32,7 @@ Shall print the same output as without solution since every line is unique.
 
 Beware, this is effectively a fork bomb as it spawns a shell per line.
 
-```
+```bash
 cat /dev/urandom | hexdump -C | (:(){ read i && (echo "$1" | grep -q ':$i:' || echo $i; : "$1$i:";) }; : ":" done)
 ```
 
@@ -40,6 +40,6 @@ cat /dev/urandom | hexdump -C | (:(){ read i && (echo "$1" | grep -q ':$i:' || e
 
 Insert the line $0 into the associative array a or increment a counter.
 
-```
-awk '!a[$0]++'
+```bash
+echo -e "1\n2\n3\n2" | awk '!a[$0]++'
 ```
