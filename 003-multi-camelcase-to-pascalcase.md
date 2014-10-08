@@ -20,7 +20,7 @@ WordMyWordBlubMyBlah
 
 Split words up into several lines and transform first characters to upper case, then join lines.
 
-```
+```bash
 echo 'Word myWordBlub myBlah' | for i in `</dev/stdin`; do echo `echo $i | cut -c1 | tr 'a-z' 'A-Z'``echo $i | cut -c2-`; done | tr -d '\n'; echo
 ```
 
@@ -28,6 +28,6 @@ echo 'Word myWordBlub myBlah' | for i in `</dev/stdin`; do echo `echo $i | cut -
 
 Using perl:
 
-```
+```bash
 echo 'Word myWordBlub myBlah' | perl -pe 's# [a-z]#uc $&#ge' | tr -d \ 
 ```
