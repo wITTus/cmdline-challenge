@@ -33,3 +33,15 @@ two
 
 ## Solution 1
 
+The best approach available is done by using the lesser known command `comm`.
+
+```bash
+comm -23 <(sort A) <(sort B)
+```
+
+Alternatively, grep may be used. But beware, this approach is using a pattern file. That means, `o.e` would falsely match as well.
+
+```bash
+grep -vf B A
+```
+
