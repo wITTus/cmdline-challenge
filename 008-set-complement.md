@@ -26,8 +26,10 @@ six
 
 The solution applied on both files shall print the following output:
 
+```
 one
 two
+```
 
 ## Solution 1
 
